@@ -30,9 +30,11 @@ const slide = () => {
 			<div className={`item-slick1 ${styles[item.name]}`} key={index}>
 				<div className="container h-full">
 					<div className="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-						<Animated animationOut="fadeOut" isVisible={true}>
+						<div className="layer-slick1 animated"  data-delay="0">
+							<span className="ltext-101 cl2 respon2">
 								{item.collectionContent}
-						</Animated>
+							</span>
+						</div>
 
 						<div className="layer-slick1 animated" data-appear="fadeInUp" data-delay="800">
 							<h2 className="ltext-201 cl2 p-t-19 p-b-43 respon1">
