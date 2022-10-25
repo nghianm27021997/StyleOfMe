@@ -28,3 +28,11 @@ a {
     background: black;
   }
 }
+
+/* slider */
+.slick-slider {
+  overflow-x: hidden;
+}
+.slick-dots {
+  bottom: 20px !important;
+}
