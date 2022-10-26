@@ -15,9 +15,8 @@ const Home: NextPage = () => {
         <title>Code For Life</title>
         <meta name="description" content="Code For Life"></meta>
       </Head>
-        <Script
-          src="/js/function.js" strategy="lazyOnload" async type="module"
-        ></Script>
+        <Script src="/js/function.js" strategy="lazyOnload" async type="module" ></Script>
+        <Script src="/js/slick.js" strategy="lazyOnload" async type="module" ></Script>
       <Layout>
         <Slide />
         <Banner />
