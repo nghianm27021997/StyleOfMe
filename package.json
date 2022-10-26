@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type": "tsc --project ./tsconfig.json --noEmit",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "type": "tsc --project ./tsconfig.json --noEmit"
   },
   "dependencies": {
     "jquery": "^3.6.1",
