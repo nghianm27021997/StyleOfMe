@@ -3,7 +3,6 @@ import styles from "./slide.module.scss";
 import Slider from "react-slick";
 import { AnimatedProps } from 'react-animated-css';
 
-class Animated extends Component<PropsWithChildren<AnimatedProps>> {}
 
 const slide = () => {
 	const slideArray = [
@@ -32,7 +31,7 @@ const slide = () => {
 			<div className={`item-slick1 ${styles[item.name]}`} key={index}>
 				<div className="container h-full">
 					<div className="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-						<Animated
+						{/* <Animated
 							animationIn={index === 0 ? "fadeInDown" : (index === 1 ? "rollIn" : "rotateInDownLeft")}
 							animationOut={index === 0 ? "fadeInDown" : (index === 1 ? "rollIn" : "rotateInDownLeft")}
 							isVisible={true}
@@ -76,7 +75,7 @@ const slide = () => {
 							<a href="product.html" className="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 								{item.shop}
 							</a>
-						</Animated>
+						</Animated> */}
 					</div>
 				</div>
 			</div>
