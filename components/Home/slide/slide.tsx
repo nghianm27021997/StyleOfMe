@@ -1,7 +1,9 @@
-import React from 'react'
-import styles from "./slide.module.scss"
+import React, { Component, PropsWithChildren } from 'react';
+import styles from "./slide.module.scss";
 import Slider from "react-slick";
-import { Animated } from "react-animated-css";
+import { AnimatedProps } from 'react-animated-css';
+
+class Animated extends Component<PropsWithChildren<AnimatedProps>> {}
 
 const slide = () => {
 	const slideArray = [
