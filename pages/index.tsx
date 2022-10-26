@@ -4,13 +4,23 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Layout from './layout'
-import Sectionone from '../components/Home/sectionone'
+import Slide from '../components/Home/slide/slide'
+import Banner from '../components/Home/Banner'
+import Script from 'next/script';
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Code For Life</title>
+        <meta name="description" content="Code For Life"></meta>
+      </Head>
+        <Script
+          src="/js/function.js" strategy="lazyOnload" async type="module"
+        ></Script>
       <Layout>
-        <Sectionone />
+        <Slide />
+        <Banner />
       </Layout></>
   )
 }

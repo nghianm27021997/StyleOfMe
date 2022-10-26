@@ -1,3 +1,5 @@
+// eslint-disable-next-line @next/next/no-document-import-in-page
+import { Head, Html } from 'next/document';
 import Header from '../utils/Header'
 
 type MainLayoutProps = {
@@ -6,9 +8,9 @@ type MainLayoutProps = {
 
 export default function Layout({ children }: MainLayoutProps) {
   return (
-    <div>
+    <>
       <Header />
       {children}
-    </div>
+    </>
   )
 }

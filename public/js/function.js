@@ -1,28 +1,29 @@
 
-(function ($) {
-    "use strict";
+import * as $ from './jquery-3.5.1.min.js'
 
+(function ($) {
+  "use strict";
     /*[ Load page ]
     ===========================================================*/
-    $(".animsition").animsition({
-        inClass: 'fade-in',
-        outClass: 'fade-out',
-        inDuration: 1500,
-        outDuration: 800,
-        linkElement: '.animsition-link',
-        loading: true,
-        loadingParentElement: 'html',
-        loadingClass: 'animsition-loading-1',
-        loadingInner: '<div class="loader05"></div>',
-        timeout: false,
-        timeoutCountdown: 5000,
-        onLoadEvent: true,
-        browser: [ 'animation-duration', '-webkit-animation-duration'],
-        overlay : false,
-        overlayClass : 'animsition-overlay-slide',
-        overlayParentElement : 'html',
-        transition: function(url){ window.location.href = url; }
-    });
+    // $(".animsition").animsition({
+    //     inClass: 'fade-in',
+    //     outClass: 'fade-out',
+    //     inDuration: 1500,
+    //     outDuration: 800,
+    //     linkElement: '.animsition-link',
+    //     loading: true,
+    //     loadingParentElement: 'html',
+    //     loadingClass: 'animsition-loading-1',
+    //     loadingInner: '<div class="loader05"></div>',
+    //     timeout: false,
+    //     timeoutCountdown: 5000,
+    //     onLoadEvent: true,
+    //     browser: [ 'animation-duration', '-webkit-animation-duration'],
+    //     overlay : false,
+    //     overlayClass : 'animsition-overlay-slide',
+    //     overlayParentElement : 'html',
+    //     transition: function(url){ window.location.href = url; }
+    // });
     
     /*[ Back to top ]
     ===========================================================*/
