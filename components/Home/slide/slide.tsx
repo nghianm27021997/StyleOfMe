@@ -30,7 +30,7 @@ const slide = () => {
       <div className={`item-slick1 ${styles[item.name]}`} key={index}>
         <div className="container h-full">
           <div className="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-            <div className={`layer-slick1 animate__animated ${index === 0 ? 'animate__fadeInDown' : (index === 0 ? 'animate__rollIn' : 'animate__rotateInDownLeft')} animate__delay-0s`}>
+            <div className={`layer-slick1 animate__animated animate__rollIn animate__delay-0s`}>
               <span className="ltext-101 cl2 respon2">
                 {item.collectionContent}
               </span>
@@ -42,7 +42,7 @@ const slide = () => {
               </h2>
             </div>
 
-            <div className="layer-slick1 animate__animated animate__zoomIn animate__delay-1s">
+            <div className="layer-slick1 animate__animated animate__rotateIn animate__delay-1s">
               <a href="product.html" className="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
                 {item.shop}
               </a>
@@ -51,10 +51,6 @@ const slide = () => {
         </div>
       </div>
     ));
-
-  const changeSlide = () => {
-    console.log('123')
-  }
 
   return (
     <>

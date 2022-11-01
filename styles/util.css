@@ -50,7 +50,7 @@ button {
 	cursor: pointer;
 }
 
-button:focus {outline: none;}
+button:focus {outline: none !important;}
 
 iframe {border: none;}
 

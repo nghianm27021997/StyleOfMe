@@ -7,6 +7,7 @@ import Layout from './layout'
 import Slide from '../components/Home/slide/slide'
 import Banner from '../components/Home/Banner'
 import Script from 'next/script';
+import Product from '../components/Home/products'
 
 const Home: NextPage = () => {
   return (
@@ -14,12 +15,14 @@ const Home: NextPage = () => {
       <Head>
         <title>Code For Life</title>
         <meta name="description" content="Code For Life"></meta>
+        {/* <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script> */}
       </Head>
-        <Script src="/js/function.js" strategy="lazyOnload" async type="module" ></Script>
-        <Script src="/js/slick.js" strategy="lazyOnload" async type="module" ></Script>
+      <Script src="/js/isotope.pkgd.min.js" type="module"></Script>
+      <Script src="/js/function.js" type="module" ></Script>
       <Layout>
         <Slide />
         <Banner />
+        <Product />
       </Layout></>
   )
 }
