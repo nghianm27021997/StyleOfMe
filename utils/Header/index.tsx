@@ -1,6 +1,17 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
 const HeaderContainer = () => {
+  const router = useRouter();
+  const lengtPathName = router.pathname.length;
+  const pathName = router.pathname.replace("/", "");
+
+  const directLink = (value: string) => {
+    location.href = value;
+  }
 
   return (
     <>
@@ -34,28 +45,23 @@ const HeaderContainer = () => {
             </div>
           </div>
 
-          <div className="wrap-menu-desktop">
+          <div className={`wrap-menu-desktop ${lengtPathName > 1 ? 'how-shadow1' : ''}`}>
             <nav className="limiter-menu-desktop container">
 
               {/* <!-- Logo desktop -->		 */}
               <a href="#" className="logo">
-                <img src="images/icons/logo-01.png" alt="IMG-LOGO" />
+                <img src="/images/icons/logo-01.png" alt="IMG-LOGO" />
               </a>
 
               {/* <!-- Menu desktop --> */}
               <div className="menu-desktop">
                 <ul className="main-menu">
-                  <li className="active-menu">
-                    <a href="index.html">Home</a>
-                    <ul className="sub-menu">
-                      <li><a href="index.html">Homepage 1</a></li>
-                      <li><a href="home-02.html">Homepage 2</a></li>
-                      <li><a href="home-03.html">Homepage 3</a></li>
-                    </ul>
+                  <li className={`${pathName === "" ? 'active-menu' : ''}`}>
+                    <a onClick={() => directLink("/")} href="#">Home</a>
                   </li>
 
-                  <li>
-                    <a href="product.html">Shop</a>
+                  <li className={`${pathName === "products" ? 'active-menu' : ''}`}>
+                    <a href="#" onClick={() => directLink("/products")}>Shop</a>
                   </li>
 
                   <li className="label1" data-label1="hot">
@@ -98,7 +104,7 @@ const HeaderContainer = () => {
         <div className="wrap-header-mobile">
           {/* <!-- Logo moblie -->		 */}
           <div className="logo-mobile">
-            <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO" /></a>
+            <Link href="index.html"><img src="/images/icons/logo-01.png" alt="IMG-LOGO" /></Link>
           </div>
 
           {/* <!-- Icon header --> */}
@@ -111,9 +117,9 @@ const HeaderContainer = () => {
               <i className="zmdi zmdi-shopping-cart"></i>
             </div>
 
-            <a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
+            <Link href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
               <i className="zmdi zmdi-favorite-outline"></i>
-            </a>
+            </Link>
           </div>
 
           {/* <!-- Button show menu --> */}
@@ -136,32 +142,32 @@ const HeaderContainer = () => {
 
             <li>
               <div className="right-top-bar flex-w h-full">
-                <a href="#" className="flex-c-m p-lr-10 trans-04">
+                <Link href="#" className="flex-c-m p-lr-10 trans-04">
                   Help & FAQs
-                </a>
+                </Link>
 
-                <a href="#" className="flex-c-m p-lr-10 trans-04">
+                <Link href="#" className="flex-c-m p-lr-10 trans-04">
                   My Account
-                </a>
+                </Link>
 
-                <a href="#" className="flex-c-m p-lr-10 trans-04">
+                <Link href="#" className="flex-c-m p-lr-10 trans-04">
                   EN
-                </a>
+                </Link>
 
-                <a href="#" className="flex-c-m p-lr-10 trans-04">
+                <Link href="#" className="flex-c-m p-lr-10 trans-04">
                   USD
-                </a>
+                </Link>
               </div>
             </li>
           </ul>
 
           <ul className="main-menu-m">
             <li>
-              <a href="index.html">Home</a>
+              <Link href="index.html">Home</Link>
               <ul className="sub-menu-m">
-                <li><a href="index.html">Homepage 1</a></li>
-                <li><a href="home-02.html">Homepage 2</a></li>
-                <li><a href="home-03.html">Homepage 3</a></li>
+                <li><Link href="index.html">Homepage 1</Link></li>
+                <li><Link href="home-02.html">Homepage 2</Link></li>
+                <li><Link href="home-03.html">Homepage 3</Link></li>
               </ul>
               <span className="arrow-main-menu-m">
                 <i className="fa fa-angle-right" aria-hidden="true"></i>
@@ -169,23 +175,23 @@ const HeaderContainer = () => {
             </li>
 
             <li>
-              <a href="product.html">Shop</a>
+              <Link href="product.html">Shop</Link>
             </li>
 
             <li>
-              <a href="shoping-cart.html" className="label1 rs1" data-label1="hot">Features</a>
+              <Link href="shoping-cart.html" className="label1 rs1" data-label1="hot">Features</Link>
             </li>
 
             <li>
-              <a href="blog.html">Blog</a>
+              <Link href="blog.html">Blog</Link>
             </li>
 
             <li>
-              <a href="about.html">About</a>
+              <Link href="about.html">About</Link>
             </li>
 
             <li>
-              <a href="contact.html">Contact</a>
+              <Link href="contact.html">Contact</Link>
             </li>
           </ul>
         </div>
@@ -194,7 +200,7 @@ const HeaderContainer = () => {
         <div className="modal-search-header flex-c-m trans-04 js-hide-modal-search">
           <div className="container-search-header">
             <button className="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-              <img src="images/icons/icon-close2.png" alt="CLOSE" />
+              <img src="/images/icons/icon-close2.png" alt="CLOSE" />
             </button>
 
             <form className="wrap-search-header flex-w p-l-15">
@@ -205,7 +211,7 @@ const HeaderContainer = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div >
     </>
   )
 }

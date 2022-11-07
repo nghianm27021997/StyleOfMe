@@ -1,17 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Image from 'next/image'
-import DATA_HOME from "../../../types/mokupdata"
+import DATA_HOME, { homeData } from "../../../types/mokupdata"
+import { useRouter } from 'next/router'
 
 const HomeSearchResult = () => {
-  console.log(DATA_HOME)
+  const router = useRouter();
+  const gotoDetail = (item: homeData) => {
+    location.href = `/products/${item.type}/${1}`;
+  }
+
   const listData = () =>
-    DATA_HOME.map((item, index) => {
+    DATA_HOME.map((item: homeData, index) => {
       return (
         <div className={`col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${item.type}`} key={index}>
           {/* <!-- Block2 --> */}
           <div className="block2">
-            <div className="block2-pic hov-img0">
+            <div className="block2-pic hov-img0" onClick={() => gotoDetail(item)}>
               <img src={item.image} alt="Image-PRODUCT" />
               <a
                 href="#"
@@ -23,8 +28,9 @@ const HomeSearchResult = () => {
             <div className="block2-txt flex-w flex-t p-t-14">
               <div className="block2-txt-child1 flex-col-l">
                 <a
-                  href="product-detail.html"
+                  href="#"
                   className="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
+                  onClick={() => gotoDetail(item)}
                 >
                   {item.title}
                 </a>

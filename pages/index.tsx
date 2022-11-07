@@ -7,8 +7,7 @@ import Layout from './layout'
 import Slide from '../components/Home/slide/slide'
 import Banner from '../components/Home/Banner'
 import Script from 'next/script';
-import Product from '../components/Home/products'
-
+import Products from '../components/products/products'
 const Home: NextPage = () => {
   return (
     <>
@@ -22,8 +21,9 @@ const Home: NextPage = () => {
       <Layout>
         <Slide />
         <Banner />
-        <Product />
-      </Layout></>
+        <Products />
+      </Layout>
+    </>
   )
 }
 

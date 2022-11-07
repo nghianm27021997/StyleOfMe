@@ -1,8 +1,8 @@
 import React from 'react'
-import HomeSearchCondition from './Cards/HomeSearchCondition'
-import HomeSearchResult from './Cards/HomeSearchResult'
+import HomeSearchCondition from '../Home/Cards/HomeSearchCondition'
+import HomeSearchResult from '../Home/Cards/HomeSearchResult'
 
-const products = () => {
+const Products = () => {
   return (
     <section className="bg0 p-t-23 p-b-140">
       <div className="container">
@@ -22,4 +22,4 @@ const products = () => {
   )
 }
 
-export default products
+export default Products

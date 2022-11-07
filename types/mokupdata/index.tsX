@@ -18,4 +18,12 @@ export const DATA_HOME = [
     { image: '/images/product-16.jpg', quickview: 'Quick View', title: 'Square Neck Back', price: '$29.64', type: 'bag' },
 ]
 
+export type homeData = {
+    image: string,
+    quickview: string,
+    title: string,
+    price: string,
+    type: string,
+}
+
 export default DATA_HOME
