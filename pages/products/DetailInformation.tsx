@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DetailInformation = () => {
+const DetailInformation = () => {
   return (
     <div className="bor10 m-t-50 p-t-43 p-b-40">
       {/* <!-- Tab01 --> */}
@@ -177,3 +177,5 @@ export const DetailInformation = () => {
     </div>
   )
 }
+
+export default DetailInformation;

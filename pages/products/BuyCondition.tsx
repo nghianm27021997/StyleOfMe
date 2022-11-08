@@ -1,7 +1,7 @@
 import React from 'react'
 import { Select } from 'antd';
 
-export const BuyCondition = () => {
+const BuyCondition = () => {
   return (
     <div className="col-md-6 col-lg-5 p-b-30">
       <div className="p-r-50 p-t-5 p-lr-0-lg">
@@ -140,3 +140,5 @@ export const BuyCondition = () => {
     </div>
   )
 }
+
+export default BuyCondition;

@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/role-has-required-aria-props */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { BuyCondition } from './BuyCondition';
-import { DetailInformation } from './DetailInformation';
+import BuyCondition from './BuyCondition';
+import DetailInformation from './DetailInformation';
 
 const DetailProduct = () => {
   const slideDetail = () =>
