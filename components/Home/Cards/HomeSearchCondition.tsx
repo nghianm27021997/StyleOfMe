@@ -1,7 +1,11 @@
+import { useRouter } from "next/router"
+
 const HomeSearchCondition = () => {
+  const router = useRouter();
+  const productRoute = router.pathname.includes('products')
   return (
     <div>
-      <div className="p-b-10">
+      <div className={`p-b-10 ${productRoute ? 'display_none' : ''}`}>
         <h3 className="ltext-103 cl5">
           Product Overview
         </h3>

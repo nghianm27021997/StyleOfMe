@@ -29,10 +29,36 @@ a {
   }
 }
 
+.display_none {
+  display: none !important;
+}
+
 /* slider */
 .slick-slider {
   overflow-x: hidden;
 }
 .slick-dots {
   bottom: 20px !important;
+}
+
+/* ant-select */
+.ant-select-selector {
+  height: 100% !important;
+}
+.ant-select-selection-item {
+  display: flex;
+  align-items: center;
+}
+
+/* react-responsive-caroure */
+.carousel.carousel-slider .control-arrow {
+  top: 50% !important;
+  color: #fff;
+  font-size: 26px;
+  bottom: 50% !important;
+  margin-top: 0;
+  padding: 15px 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: gray !important;
 }

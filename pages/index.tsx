@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -14,15 +15,17 @@ const Home: NextPage = () => {
       <Head>
         <title>Code For Life</title>
         <meta name="description" content="Code For Life"></meta>
-        {/* <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script> */}
       </Head>
-      <Script src="/js/isotope.pkgd.min.js" type="module"></Script>
-      <Script src="/js/function.js" type="module" ></Script>
       <Layout>
         <Slide />
         <Banner />
         <Products />
       </Layout>
+      <Script src="/js/jquery-3-5.1.min.js" type="module" ></Script>
+      <Script src="/js/function.js" type="module" ></Script>
+      <Script src="/js/select2/select2.js" type="module"></Script>
+      <Script src="/js/select2/select2.min.js" type="module"></Script>
+      <Script src="/js/isotope.pkgd.min.js" type="module"></Script>
     </>
   )
 }

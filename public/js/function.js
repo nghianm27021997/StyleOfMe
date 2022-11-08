@@ -54,6 +54,7 @@ import * as $ from './jquery-3.5.1.min.js'
         var posWrapHeader = 0;
     }
     
+
     if($(window).scrollTop() > posWrapHeader) {
         $(headerDesktop).addClass('fix-menu-desktop');
         $(wrapMenu).css('top',0); 

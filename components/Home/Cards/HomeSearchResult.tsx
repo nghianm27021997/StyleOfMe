@@ -19,7 +19,7 @@ const HomeSearchResult = () => {
             <div className="block2-pic hov-img0" onClick={() => gotoDetail(item)}>
               <img src={item.image} alt="Image-PRODUCT" />
               <a
-                href="#"
+                href="#!"
                 className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1"
               >
                 {item.quickview}
@@ -28,7 +28,7 @@ const HomeSearchResult = () => {
             <div className="block2-txt flex-w flex-t p-t-14">
               <div className="block2-txt-child1 flex-col-l">
                 <a
-                  href="#"
+                  href="#!"
                   className="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
                   onClick={() => gotoDetail(item)}
                 >
@@ -39,7 +39,7 @@ const HomeSearchResult = () => {
               </div>
               <div className="block2-txt-child2 flex-r p-t-3">
                 <a
-                  href="#"
+                  href="#!"
                   className="btn-addwish-b2 dis-block pos-relative js-addwish-b2"
                 >
                   <img

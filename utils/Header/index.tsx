@@ -49,7 +49,7 @@ const HeaderContainer = () => {
             <nav className="limiter-menu-desktop container">
 
               {/* <!-- Logo desktop -->		 */}
-              <a href="#" className="logo">
+              <a href="/" className="logo">
                 <img src="/images/icons/logo-01.png" alt="IMG-LOGO" />
               </a>
 
@@ -57,11 +57,11 @@ const HeaderContainer = () => {
               <div className="menu-desktop">
                 <ul className="main-menu">
                   <li className={`${pathName === "" ? 'active-menu' : ''}`}>
-                    <a onClick={() => directLink("/")} href="#">Home</a>
+                    <a onClick={() => directLink("/")} href="#!">Home</a>
                   </li>
 
                   <li className={`${pathName === "products" ? 'active-menu' : ''}`}>
-                    <a href="#" onClick={() => directLink("/products")}>Shop</a>
+                    <a href="#!" onClick={() => directLink("/products")}>Shop</a>
                   </li>
 
                   <li className="label1" data-label1="hot">
