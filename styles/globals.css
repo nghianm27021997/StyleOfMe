@@ -62,3 +62,12 @@ a {
   align-items: center !important;
   background: gray !important;
 }
+
+.carousel .thumbs {
+  text-align: center;
+}
+
+/* navbar */
+.nav-tabs .nav-link {
+  border: unset !important;
+}

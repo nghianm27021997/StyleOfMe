@@ -12,6 +12,8 @@ const ProductsPage = () => {
       </Layout>
     </header>
     <Script src="/js/function.js" type="module" ></Script>
+    <Script src="/js/isotope.pkgd.min.js" type="module" ></Script>
+    <Script src="/js/MagnificPopup/jquery.magniflict-popup.js" type="module" ></Script>
     </>
   )
 }

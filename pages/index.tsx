@@ -15,6 +15,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Code For Life</title>
         <meta name="description" content="Code For Life"></meta>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </Head>
       <Layout>
         <Slide />

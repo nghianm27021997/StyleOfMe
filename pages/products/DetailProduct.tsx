@@ -40,7 +40,7 @@ const DetailProduct = () => {
                     showArrows={true}
                     autoPlay={true}
                     renderThumbs={renderCustomThumbs}
-                    thumbWidth={130}
+                    thumbWidth={100}
                     showIndicators={false}
                     infiniteLoop={true}
                     showStatus={false}
