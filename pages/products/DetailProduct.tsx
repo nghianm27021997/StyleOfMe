@@ -1,28 +1,50 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import BuyCondition from './BuyCondition';
 import DetailInformation from './DetailInformation';
+import FsLightbox from 'fslightbox-react';
 
 const DetailProduct = () => {
-  const slideDetail = () =>
-    [1, 2, 3].map((item,index) => (
-      <div className="item-slick3" data-thumb={`/images/product-detail-0${item}.jpg`} key={item}>
-        <div className="wrap-pic-w pos-relative">
-          <img src={`/images/product-detail-0${item}.jpg`} alt="IMG-PRODUCT" />
+  const [productIndex, setProductIndex] = useState(0);
+  const [productsImages, setProductsImages] = useState([
+    '/images/product-detail-01.jpg',
+    '/images/product-detail-02.jpg',
+    '/images/product-detail-03.jpg',
+  ])
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1
+  });
 
-          <a className="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href={`/images/product-detail-0${item}.jpg`}>
+  function openLightboxOnSlide(number: number) {
+    console.log(number)
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number
+    });
+  }
+
+  const slideDetail = () =>
+    productsImages.map((item, index) => (
+      <div className="item-slick3" data-thumb={item} key={index}>
+        <div className="wrap-pic-w pos-relative">
+          <img src={`/images/product-detail-0${index + 1}.jpg`} alt="IMG-PRODUCT" />
+          <a
+            className="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
+            href="#!"
+            onClick={() => openLightboxOnSlide(index+1)}>
             <i className="fa fa-expand"></i>
           </a>
         </div>
       </div>
     ))
 
-    const renderCustomThumbs = () =>
-    [1, 2, 3].map((item,index) => (
-      <div className="item-slick3" data-thumb={`/images/product-detail-0${item}.jpg`} key={item}>
-        <div className="wrap-pic-w pos-relative">
-          <img src={`/images/product-detail-0${item}.jpg`} alt="IMG-PRODUCT" />
+  const renderCustomThumbs = () =>
+    productsImages.map((item, index) => (
+      <div className="item-slick3" data-thumb={item} key={index}>
+        <div className="wrap-pic-w pos-relative" onClick={() => openLightboxOnSlide(index+1)}>
+          <img src={`/images/product-detail-0${index + 1}.jpg`} alt="IMG-PRODUCT" />
         </div>
       </div>
     ))
@@ -36,7 +58,7 @@ const DetailProduct = () => {
             <div className="p-l-25 p-r-30 p-lr-0-lg">
               <div className="wrap-slick3 flex-sb flex-w">
                 <div className="slick3 gallery-lb">
-                  <Carousel 
+                  <Carousel
                     showArrows={true}
                     autoPlay={true}
                     renderThumbs={renderCustomThumbs}
@@ -67,6 +89,12 @@ const DetailProduct = () => {
           Categories: Jacket, Men
         </span>
       </div>
+
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={productsImages}
+        slide={lightboxController.slide}
+      />
     </section>
   )
 }

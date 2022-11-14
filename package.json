@@ -13,6 +13,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "antd": "^4.24.1",
+    "fslightbox-react": "^1.6.2-2",
     "jquery": "^3.6.1",
     "next": "12.3.1",
     "react": "18.2.0",
@@ -24,6 +25,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/fslightbox-react": "^1.4.2",
     "@types/jquery": "^3.5.14",
     "@types/node": "18.11.4",
     "@types/react": "18.0.21",
